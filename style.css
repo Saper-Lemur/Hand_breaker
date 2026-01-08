@@ -182,11 +182,14 @@ body::after {
 }
 
 .finish-line img {
-    width: 350px;
-    height: 200px;
-    object-fit: cover;
+    width: 300px;
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
     display: block;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 .stars-container {
@@ -664,30 +667,31 @@ body::after {
 }
 
 .dlc-warning {
-    background: rgba(231, 76, 60, 0.3);
-    border: 2px solid #e74c3c;
-    border-radius: 10px;
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid #e74c3c;
+    border-radius: 15px;
+    padding: 25px 30px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .dlc-warning p {
-    color: #ff6b6b;
+    color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    margin: 8px 0;
+    font-size: 18px;
+    margin: 10px 0;
 }
 
 .dlc-warning p:first-child {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    color: #e74c3c;
+    color: #ff4444;
 }
 
 @media (max-width: 768px) {
     .dlc-warning {
-        padding: 15px;
+        padding: 20px 15px;
+        margin-bottom: 15px;
     }
     
     .dlc-warning p {
@@ -695,7 +699,7 @@ body::after {
     }
     
     .dlc-warning p:first-child {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 

@@ -692,17 +692,21 @@ bonusRewardBtn.addEventListener('click', () => {
     bonusGif.classList.add('hidden');
     bonusVideo.classList.add('hidden');
     
-    if (currentLevel === 3 || currentLevel === 5) {
-        // Уровни 3 и 5 - показать видео
+    if (currentLevel === 5) {
+        // DLC уровень 3 (уровень 5) - показать видео валдырь.mp4
         bonusVideo.classList.remove('hidden');
         bonusVideo.querySelector('source').src = 'валдырь.mp4';
         bonusVideo.load();
         bonusVideo.currentTime = 0;
         bonusVideo.play().catch(() => {});
     } else if (currentLevel === 4) {
-        // Уровень 4 - показать гифку
+        // DLC уровень 2 (уровень 4) - показать гифку 45.gif
         bonusGif.classList.remove('hidden');
         bonusGif.src = '45.gif';
+    } else if (currentLevel === 3) {
+        // DLC уровень 1 (уровень 3) - показать гифку 45726.gif
+        bonusGif.classList.remove('hidden');
+        bonusGif.src = '45726.gif';
     }
     
     bonusFullscreen.classList.remove('hidden');
